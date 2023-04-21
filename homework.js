@@ -119,8 +119,37 @@ Timmy.eat(2, 2);
 // Have Timmy exercise twice.
 
 Timmy.excercise(2);
-console.log(Timmy);
-
-// console.log(Gus);
-
 // console.log(Timmy);
+
+// Task 4:  Create Chef Factory and Dinner Class
+// Add a constructor to Dinner that sets the string properties appetizer, entree, and dessert.
+class Dinner {
+  constructor(appetizer, entree, dessert) {
+    this.appetizer = appetizer;
+    this.entree = entree;
+    this.dessert = dessert;
+  }
+}
+
+// Add a method to Chef that takes three arguments and returns a new Dinner instance based on those arguments.
+class Chef {
+  newDinner(appetizer, entree, dessert) {
+    return new Dinner(appetizer, entree, dessert);
+  }
+}
+
+// Have the Chef create 3 Dinner instances and log the dinners.
+
+const chef = new Chef();
+
+const dinner1 = chef.newDinner(
+  "salmon tartare",
+  "steak frites",
+  "chocolate cake"
+);
+
+const dinner2 = chef.newDinner("caesar salad", "seared halibut", "tiramisu");
+
+const dinner3 = chef.newDinner("clam chowder", "scallops", "hot fudge sunday");
+
+console.log(dinner3);
